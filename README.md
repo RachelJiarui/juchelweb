@@ -1,2 +1,3 @@
-# juchelweb
-A website for Juliette and Rachel
+# Juchel's Webpage
+
+A website dedicated for Juliette and Rachel
