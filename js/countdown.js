@@ -1,9 +1,16 @@
-// Set the date we're counting down to
-var countDownDate = new Date("Oct 21, 2022").getTime();
+// global.func;
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+function submit() {
+    var countdown_string = document.getElementById("input").value;
+    var date = new Date(countdown_string).getTime();
+    var func = setInterval(withDate(date), 1000);
+}
 
+function start() {
+  document.getElementById("countdown-date").innerHTML = "[input a new date]";
+}
+
+function withDate(countDownDate) {
   // Get today's date and time
   var now = new Date().getTime();
 
@@ -13,13 +20,14 @@ var x = setInterval(function() {
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
   // Display the result in the element with id="demo"
-  document.getElementById("countdown-date").innerHTML = days + "d " + hours + "h ";
+  document.getElementById("countdown-date").innerHTML = days + "d " + hours + "h " + minutes + "m";
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown-date").innerHTML = "Input a new date";
+    document.getElementById("countdown-date").innerHTML = "[input a new date]";
   }
-}, 1000);
+}

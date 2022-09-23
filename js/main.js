@@ -13,7 +13,7 @@ function dateDiffInDays(a, b) {
 
 const a = new Date("2022-05-15");
 const b = new Date();
-const difference = dateDiffInDays(a, b) -1;
+const difference = dateDiffInDays(a, b) - 1;
 const binary_diff = difference.toString(2);
 
 document.getElementById("relationship-length").innerHTML = binary_diff;
@@ -75,6 +75,6 @@ window.onload = function() {
   // INJECT CSS
   var css = document.createElement("style");
   css.type = "text/css";
-  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #AC7088;}";
+  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
 };
